@@ -1,6 +1,3 @@
-Here's a clean, professional README.md ready to copy and paste directly into VS Code:
-
-```markdown
 # Legal Case Management System
 
 A comprehensive full-stack web application for attorneys and legal professionals to efficiently manage cases, clients, schedules, and legal documents with real-time data visualization.
@@ -84,7 +81,6 @@ A comprehensive full-stack web application for attorneys and legal professionals
 - Dotenv - Environment variables
 
 ## Project Structure
-```
 
 legal-case-management/
 ├── backend/
@@ -152,62 +148,51 @@ legal-case-management/
 ├── .gitignore
 └── README.md
 
-````
+text
 
 ## Installation Guide
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
 - MongoDB (local installation or MongoDB Atlas account)
 - npm or yarn package manager
 
 ### Step 1: Clone the Repository
+
 ```bash
 git clone https://github.com/yourusername/legal-case-management.git
 cd legal-case-management
-````
-
-### Step 2: Backend Setup
-
-```bash
+Step 2: Backend Setup
+bash
 cd backend
 npm install
-```
+Create a .env file in the backend folder:
 
-Create a `.env` file in the backend folder:
-
-```env
+env
 PORT=5000
 MONGODB_URI=mongodb://127.0.0.1:27017/legal_case_management
 JWT_SECRET=your_super_secret_jwt_key_here
 JWT_EXPIRE=7d
 NODE_ENV=development
-```
-
 Start the backend server:
 
-```bash
+bash
 npm run dev
-```
-
-### Step 3: Frontend Setup
-
-```bash
+Step 3: Frontend Setup
+bash
 cd frontend
 npm install
 npm start
-```
+Step 4: Access the Application
+Frontend: http://localhost:3000
 
-### Step 4: Access the Application
+Backend API: http://localhost:5000
 
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:5000
+Environment Variables
+Create a .env file in the backend folder:
 
-## Environment Variables
-
-Create a `.env` file in the `backend` folder:
-
-```env
+env
 # Server Configuration
 PORT=5000
 NODE_ENV=development
@@ -222,121 +207,105 @@ MONGODB_URI=mongodb://127.0.0.1:27017/legal_case_management
 # JWT Configuration
 JWT_SECRET=your_super_secret_jwt_key_here
 JWT_EXPIRE=7d
-```
+Usage Guide
+Registration
+Navigate to /register
 
-## Usage Guide
+Fill in professional details: Full Name, Email, Password, Phone Number, Office Address, Working Hours
 
-### Registration
+Login
+Use registered email and password
 
-- Navigate to `/register`
-- Fill in professional details: Full Name, Email, Password, Phone Number, Office Address, Working Hours
+JWT token automatically stored for authenticated requests
 
-### Login
+Dashboard
+View KPI cards for quick statistics
 
-- Use registered email and password
-- JWT token automatically stored for authenticated requests
+Analyze cases through 5 different charts
 
-### Dashboard
+Check upcoming hearings (color-coded by urgency)
 
-- View KPI cards for quick statistics
-- Analyze cases through 5 different charts
-- Check upcoming hearings (color-coded by urgency)
-- Review recent cases
+Review recent cases
 
-### Managing Cases
+Managing Cases
+Go to "Cases" in sidebar
 
-- Go to "Cases" in sidebar
-- Click "Add New Case" to create a case
-- Fill in all required details (client must exist first)
-- Use search and filters to find specific cases
-- Click eye icon to view case details
-- Download PDF summary from case details page
-- Edit or delete cases as needed
+Click "Add New Case" to create a case
 
-### Managing Clients
+Fill in all required details (client must exist first)
 
-- Navigate to "Clients" section
-- Add new clients with complete information
-- View all cases associated with each client
-- Edit or delete client information
+Use search and filters to find specific cases
 
-### Calendar
+Click eye icon to view case details
 
-- View all hearing dates in calendar format
-- Switch between month, week, and day views
-- Click on any hearing to view case details
+Download PDF summary from case details page
 
-### Notifications
+Edit or delete cases as needed
 
-- Bell icon shows unread notification count
-- Click to view all notifications
-- Mark as read individually or all at once
+Managing Clients
+Navigate to "Clients" section
 
-### Profile
+Add new clients with complete information
 
-- Update personal information
-- Modify working hours
-- View account statistics
+View all cases associated with each client
 
-## API Documentation
+Edit or delete client information
 
-### Authentication Endpoints
+Calendar
+View all hearing dates in calendar format
 
-| Method | Endpoint             | Description       |
-| ------ | -------------------- | ----------------- |
-| POST   | `/api/auth/register` | Register new user |
-| POST   | `/api/auth/login`    | Login user        |
-| GET    | `/api/auth/me`       | Get current user  |
-| PUT    | `/api/auth/profile`  | Update profile    |
+Switch between month, week, and day views
 
-### Case Endpoints
+Click on any hearing to view case details
 
-| Method | Endpoint         | Description     |
-| ------ | ---------------- | --------------- |
-| GET    | `/api/cases`     | Get all cases   |
-| POST   | `/api/cases`     | Create new case |
-| GET    | `/api/cases/:id` | Get single case |
-| PUT    | `/api/cases/:id` | Update case     |
-| DELETE | `/api/cases/:id` | Delete case     |
+Notifications
+Bell icon shows unread notification count
 
-### Client Endpoints
+Click to view all notifications
 
-| Method | Endpoint           | Description       |
-| ------ | ------------------ | ----------------- |
-| GET    | `/api/clients`     | Get all clients   |
-| POST   | `/api/clients`     | Create new client |
-| GET    | `/api/clients/:id` | Get single client |
-| PUT    | `/api/clients/:id` | Update client     |
-| DELETE | `/api/clients/:id` | Delete client     |
+Mark as read individually or all at once
 
-### Dashboard Endpoints
+Profile
+Update personal information
 
-| Method | Endpoint                  | Description              |
-| ------ | ------------------------- | ------------------------ |
-| GET    | `/api/dashboard/stats`    | Get dashboard statistics |
-| GET    | `/api/dashboard/calendar` | Get calendar events      |
+Modify working hours
 
-### File Endpoints
+View account statistics
 
-| Method | Endpoint                        | Description       |
-| ------ | ------------------------------- | ----------------- |
-| GET    | `/api/files/cases/:id/download` | Download case PDF |
-
-### Notification Endpoints
-
-| Method | Endpoint                      | Description         |
-| ------ | ----------------------------- | ------------------- |
-| GET    | `/api/notifications`          | Get notifications   |
-| PUT    | `/api/notifications/:id/read` | Mark as read        |
-| PUT    | `/api/notifications/read-all` | Mark all as read    |
-| DELETE | `/api/notifications/:id`      | Delete notification |
-
-## License
-
+API Documentation
+Authentication Endpoints
+Method	Endpoint	Description
+POST	/api/auth/register	Register new user
+POST	/api/auth/login	Login user
+GET	/api/auth/me	Get current user
+PUT	/api/auth/profile	Update profile
+Case Endpoints
+Method	Endpoint	Description
+GET	/api/cases	Get all cases
+POST	/api/cases	Create new case
+GET	/api/cases/:id	Get single case
+PUT	/api/cases/:id	Update case
+DELETE	/api/cases/:id	Delete case
+Client Endpoints
+Method	Endpoint	Description
+GET	/api/clients	Get all clients
+POST	/api/clients	Create new client
+GET	/api/clients/:id	Get single client
+PUT	/api/clients/:id	Update client
+DELETE	/api/clients/:id	Delete client
+Dashboard Endpoints
+Method	Endpoint	Description
+GET	/api/dashboard/stats	Get dashboard statistics
+GET	/api/dashboard/calendar	Get calendar events
+File Endpoints
+Method	Endpoint	Description
+GET	/api/files/cases/:id/download	Download case PDF
+Notification Endpoints
+Method	Endpoint	Description
+GET	/api/notifications	Get notifications
+PUT	/api/notifications/:id/read	Mark as read
+PUT	/api/notifications/read-all	Mark all as read
+DELETE	/api/notifications/:id	Delete notification
+License
 This project is licensed under the MIT License.
-
----
-
-**Built with React, Node.js, Express, and MongoDB**
-
 ```
