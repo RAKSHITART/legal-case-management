@@ -1,7 +1,3 @@
-Got it 👍 Clean, professional, and without icons. No major content changes — just proper formatting.
-
----
-
 # Legal Case Management System
 
 A comprehensive full-stack web application for attorneys and legal professionals to efficiently manage cases, clients, schedules, and legal documents with real-time data visualization.
